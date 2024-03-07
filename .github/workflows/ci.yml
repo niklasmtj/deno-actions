@@ -1,0 +1,25 @@
+name: "CI"
+
+on:
+  - pull_request
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+
+      - name: "Setup Deno"
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: "1.x"
+
+      - name: "Run Tests"
+        run: deno task test
+
+      - name: "Run Lint"
+        run: deno task lint
+
+      - name: "Run Format"
+        run: deno task format
