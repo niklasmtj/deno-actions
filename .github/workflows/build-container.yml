@@ -12,11 +12,6 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v4
 
-      - name: "Setup Deno"
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: "1.x"
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
         with:
