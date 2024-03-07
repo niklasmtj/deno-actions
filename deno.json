@@ -1,8 +1,9 @@
 {
   "tasks": {
     "dev": "deno run --watch main.ts",
-    "lint": "deno lint -A",
-    "format": "deno fmt --check -A",
-    "test": "deno test --allow-read --allow-write --allow-net"
+    "lint": "deno lint",
+    "format": "deno fmt --check",
+    "test": "deno test --allow-read --allow-write --allow-net",
+    "start": "deno run main.ts"
   }
 }
