@@ -4,6 +4,7 @@
     "lint": "deno lint",
     "format": "deno fmt --check",
     "test": "deno test --allow-read --allow-write --allow-net",
-    "start": "deno run main.ts"
+    "start": "deno run main.ts",
+    "coverage": "deno test --coverage=coverage -A && deno coverage coverage --html"
   }
 }
