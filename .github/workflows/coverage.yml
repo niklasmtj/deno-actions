@@ -3,6 +3,8 @@ name: Code Coverage
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
 
 jobs:
   ci:
