@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  ci:
+  coverage:
     runs-on: ubuntu-latest
 
     steps:
