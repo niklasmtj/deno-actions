@@ -6,9 +6,15 @@ The actions are:
 - CI (ci.yml): Run tests, format and linting checks on your Deno project
 - Build Docker Container (build-docker-container.yml): Build a Docker container
   for your Deno project.
+- Build Docker Container for GitHub Container Registry
+  (build-docker-container-for-ghcr.yml): Build a Docker container for your Deno
+  project and push it to GitHub Container Registry.
 - Build OCI Container (build-oci-container.yml): Build a OCI compliant container
   for your Deno project. It is built with Buildah which creates a container
   image that is also possible to run with Docker or Podman.
+- Build OCI container for GitHub Container Registry
+  (build-oci-container-for-ghcr.yml): Build a OCI compliant container for your
+  Deno project and push it to GitHub Container Registry.
 - Build Multi Arch Docker Container (build-multi-arch-docker-container.yml):
   Build a Docker container for your Deno project. It is built with Buildx which
   creates a multi-arch container image that can run on different architectures.

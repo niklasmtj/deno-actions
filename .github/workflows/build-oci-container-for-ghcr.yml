@@ -1,4 +1,4 @@
-name: "Build OCI Container Image"
+name: "Build OCI Container Image For GHCR"
 
 on:
   push:
@@ -8,6 +8,11 @@ on:
 jobs:
   build-image:
     runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+      contents: read
+
     steps:
       - uses: actions/checkout@v4
 
@@ -20,12 +25,12 @@ jobs:
           containerfiles: |
             ./Dockerfile
 
-      - name: Push To Docker Hub
-        id: push-to-docker-hub
+      - name: Push To Github Container Registry
+        id: push-to-ghcr
         uses: redhat-actions/push-to-registry@v2
         with:
           image: ${{ steps.build-image.outputs.image }}
           tags: ${{ steps.build-image.outputs.tags }}
-          registry: docker.io
+          registry: ghcr.io
           username: niklasmtj
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: ${{ github.token }}
