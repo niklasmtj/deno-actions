@@ -1,8 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: github-actions
-    directory: '/'
+    directory: "/"
     reviewers:
-      - 'niklasmtj'
+      - "niklasmtj"
     schedule:
       interval: weekly
